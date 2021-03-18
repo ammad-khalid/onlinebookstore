@@ -29,4 +29,3 @@ stages:
        artifact: books
      #- upload: $(System.DefaultWorkingDirectory)
       # artifact: application
-      
