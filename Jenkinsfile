@@ -43,7 +43,7 @@ pipeline {
                             artifacts: [
                                 [artifactId: pom.artifactId,
                                 classifier: '',
-                                file: '/var/lib/jenkins/.m2/repository/onlinebookstore/onlinebookstore/{BUILD_ID}/onlinebookstore-{BUILD_ID}.war',
+                                file: '/var/lib/jenkins/.m2/repository/onlinebookstore/onlinebookstore/${BUILD_ID}/onlinebookstore-${BUILD_ID}.war',
                                 type: pom.packaging],
                             ]
                         );
