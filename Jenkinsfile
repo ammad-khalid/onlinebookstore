@@ -37,11 +37,11 @@ pipeline {
                             protocol: NEXUS_PROTOCOL,
                             nexusUrl: NEXUS_URL,
                             /*groupId: 'onlineGID',*/
-                            version: 'onlineVER',
+                            version: '${BUILD_ID}',
                             repository: NEXUS_REPOSITORY,
                             credentialsId: NEXUS_CREDENTIAL_ID,
                             artifacts: [
-                                [artifactId: 'onlinebookstore-${BUILD_ID}',
+                                [artifactId: 'onlinebookstore-',
                                 classifier: '',
                                 file: '/var/lib/jenkins/.m2/repository/onlinebookstore/onlinebookstore/${BUILD_ID}/onlinebookstore-${BUILD_ID}.war',
                                 type: 'war'],
