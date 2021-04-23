@@ -12,14 +12,14 @@ pipeline {
         NEXUS_REPOSITORY = "cp4i-project"
         NEXUS_CREDENTIAL_ID = "nexus-jenkins-user-credentials"
     }
-   # stages {
+/*   # stages {
    #     stage("Clone code from VCS") {
    #         steps {
    #             script {
    #                 git 'https://github.com/javaee/cargotracker.git';
    #             }
    #         }
-   #     }
+   #     }*/
         stage("Maven Build") {
             steps {
                 script {
