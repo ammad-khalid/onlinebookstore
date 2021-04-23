@@ -47,9 +47,9 @@ pipeline {
                                 type: pom.packaging],
                             ]
                         );
-                    } else {
+                } /*else {
                         error "*** File: ${artifactPath}, could not be found";
-                    }
+                    }*/
                 }
             }
         /*stage("Publish to Nexus Repository Manager") {
