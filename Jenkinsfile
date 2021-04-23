@@ -23,11 +23,13 @@ pipeline {
         stage("Maven Build") {
             steps {
                 script {
-                    sh "mvn package -DskipTests=true"
+                    sh "mvn clean install"
+                    sh "ls -lh"
+                    /*sh "mvn package -DskipTests=true"*/
                 }
             }
         }
-        stage("Publish to Nexus Repository Manager") {
+        /*stage("Publish to Nexus Repository Manager") {
             steps {
                 script {
                     pom = readMavenPom file: "pom.xml";
@@ -62,5 +64,5 @@ pipeline {
                 }
             }
         }
-    }
+    }*/
 }
