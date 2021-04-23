@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>onlinebookstore</groupId>
   <artifactId>onlinebookstore</artifactId>
-  <version>{BUILD_ID}</version>
+  <version>${BUILD_ID}</version>
   <packaging>war</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
