@@ -41,7 +41,7 @@ pipeline {
                             repository: NEXUS_REPOSITORY,
                             credentialsId: NEXUS_CREDENTIAL_ID,
                             artifacts: [
-                                [artifactId: 'onlinebookstore',
+                                [artifactId: 'onlinebookstore-${BUILD_ID}',
                                 classifier: '',
                                 file: '/var/lib/jenkins/.m2/repository/onlinebookstore/onlinebookstore/${BUILD_ID}/onlinebookstore-${BUILD_ID}.war',
                                 type: 'war'],
