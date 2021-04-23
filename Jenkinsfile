@@ -29,6 +29,29 @@ pipeline {
                 }
             }
         }
+        stage("Publish to Nexus"){
+            steps{
+                script{
+        nexusArtifactUploader(
+                            nexusVersion: NEXUS_VERSION,
+                            protocol: NEXUS_PROTOCOL,
+                            nexusUrl: NEXUS_URL,
+                            groupId: pom.groupId,
+                            version: pom.version,
+                            repository: NEXUS_REPOSITORY,
+                            credentialsId: NEXUS_CREDENTIAL_ID,
+                            artifacts: [
+                                [artifactId: pom.artifactId,
+                                classifier: '',
+                                file: /var/lib/jenkins/.m2/repository/onlinebookstore/onlinebookstore/{BUILD_ID}/onlinebookstore-{BUILD_ID}.war,
+                                type: pom.packaging],
+                            ]
+                        );
+                    } else {
+                        error "*** File: ${artifactPath}, could not be found";
+                    }
+                }
+            }
         /*stage("Publish to Nexus Repository Manager") {
             steps {
                 script {
