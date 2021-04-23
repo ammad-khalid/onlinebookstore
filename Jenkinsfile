@@ -36,8 +36,8 @@ pipeline {
                             nexusVersion: NEXUS_VERSION,
                             protocol: NEXUS_PROTOCOL,
                             nexusUrl: NEXUS_URL,
-                            /*groupId: 'onlineGID',
-                            version: 'onlineVER',*/
+                            /*groupId: 'onlineGID',*/
+                            version: 'onlineVER',
                             repository: NEXUS_REPOSITORY,
                             credentialsId: NEXUS_CREDENTIAL_ID,
                             artifacts: [
