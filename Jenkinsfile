@@ -8,7 +8,7 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "20.74.158.81:8081"
+        NEXUS_URL = "20.74.155.229:8081"
         NEXUS_REPOSITORY = "cp4i-project"
         NEXUS_CREDENTIAL_ID = "nexus-jenkins-user-credentials"
     }
