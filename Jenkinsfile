@@ -48,6 +48,7 @@ pipeline {
                 script {
                     docker build -t uk.icr.io/cp4i/cp41_repo:${BUILD_ID} -f Dockerfile
                 }
+                }
             }
         }
     }
