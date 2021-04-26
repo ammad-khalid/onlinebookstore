@@ -46,8 +46,8 @@ pipeline {
         stage("Build Container") {
             steps {
                 script {
-                    docker build -t uk.icr.io/cp4i/cp41_repo:${BUILD_ID} -f Dockerfile
-                }
+                    docker build -t uk.icr.io/cp4i/cp4i_repo:${BUILD_ID} -f Dockerfile
+                
                 }
             }
         }
