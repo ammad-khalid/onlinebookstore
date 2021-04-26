@@ -46,7 +46,7 @@ pipeline {
         stage("Build Container") {
             steps {
                 script {
-                    sh "docker build -t uk.icr.io/cp4i/cp4i_repo:${BUILD_ID} ."
+                    sh "sudo docker build -t uk.icr.io/cp4i/cp4i_repo:${BUILD_ID} ."
                 
                 }
             }
