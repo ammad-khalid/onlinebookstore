@@ -7,4 +7,4 @@ RUN cd /usr/local/tomcat/webapps/ && wget --user=admin:${adminpassword} "http://
 
 EXPOSE 8080
 
-CMD [“catalina.sh”, “run”]
+#CMD [“catalina.sh”, “run”]
