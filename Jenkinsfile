@@ -46,6 +46,7 @@ pipeline {
         stage("Build Container") {
             steps {
                 script {
+                    sh "cp /var/lib/jenkins/.m2/repository/onlinebookstore/onlinebookstore/${BUILD_ID}/onlinebookstore-${BUILD_ID}.war ${workspace}"
                     sh "docker build --build-arg BUILD_ID=${BUILD_ID} -t uk.icr.io/cp4i/cp4i_repo:${BUILD_ID} ."
                 
                 }
