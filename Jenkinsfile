@@ -52,5 +52,14 @@ pipeline {
                 }
             }
         }
+        docker login -u iamapikey -p <apikey> <registry_url>
+        stage("Login Container Registry") {
+            steps {
+                script {
+                    sh "docker login -u iamapikey -p ibm-cr-credentials uk.icr.io"
+                
+                }
+            }
+        }
     }
 }
