@@ -53,13 +53,18 @@ pipeline {
             }
         }
         
-        stage("Login Container Registry") {
-            steps {
-                script {
-                    sh "docker login -u ibm-cr-credentials uk.icr.io"
+        #stage("Login Container Registry") {
+        stage('Push image') {
+            docker.withRegistry('https://uk.icr.io', 'ibm-cr-credentials') {
+            dockerImage.push('uk.icr.io/cp4i/cp4i_repo:${BUILD_ID}')
+    }
+  }
+            #steps {
+             #   script {
+              #      sh "docker login -u ibm-cr-credentials uk.icr.io"
                 
-                }
-            }
-        }
+               # }
+            #}
+        #}
     }
 }
