@@ -56,7 +56,7 @@ pipeline {
         stage("Login Container Registry") {
            steps {
                 script {
-                    sh "docker login -u ammad.khalid@systemsltd.com -p VqdDLxLHbJg5HIcMvX7kG1XXsfEBuS5jQm0PGYR-8u1S uk.icr.io"
+                    sh "docker login -u iamapikey -p VqdDLxLHbJg5HIcMvX7kG1XXsfEBuS5jQm0PGYR-8u1S uk.icr.io"
                 
                 }
             }
