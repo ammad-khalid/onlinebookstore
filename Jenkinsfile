@@ -56,7 +56,7 @@ pipeline {
         stage("Login Container Registry") {
             steps {
                 script {
-                    sh "docker login -u ammad.khalid@systemsltd.com -p "ibm-cr-credentials" uk.icr.io"
+                    sh "docker login "ibm-cr-credentials" uk.icr.io"
                 
                 }
             }
