@@ -57,7 +57,7 @@ pipeline {
         stage("Login Container Registry") {
            steps {
                 script {
-                    sh "docker login -u iamapikey -p 'apikey' uk.icr.io"
+                    sh "docker login -u iamapikey -p "${apikey}" uk.icr.io"
                 
                 }
             }
