@@ -44,7 +44,7 @@ pipeline {
                 } 
                 }
             }
-        stage("Build Container") {
+        stage("Build Image") {
             steps {
                 script {
                     sh "cp /var/lib/jenkins/.m2/repository/onlinebookstore/onlinebookstore/${BUILD_ID}/onlinebookstore-${BUILD_ID}.war ${workspace}"
@@ -58,6 +58,14 @@ pipeline {
            steps {
                 script {
                     sh "docker login -u iamapikey -p ${API_KEY} uk.icr.io"
+                
+                }
+            }
+        }
+        stage("Push Image") {
+           steps {
+                script {
+                    sh "docker push uk.icr.io/cp4i/cp4i_repo:${BUILD_ID}"
                 
                 }
             }
