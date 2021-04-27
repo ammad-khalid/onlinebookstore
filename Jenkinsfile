@@ -11,6 +11,7 @@ pipeline {
         NEXUS_URL = "20.74.182.250:8081"
         NEXUS_REPOSITORY = "cp4i-project"
         NEXUS_CREDENTIAL_ID = "nexus-jenkins-user-credentials"
+        API_KEY = "apikey"
     }
     stages {
         stage("Maven Build") {
@@ -56,7 +57,7 @@ pipeline {
         stage("Login Container Registry") {
            steps {
                 script {
-                    sh "docker login -u iamapikey -p VqdDLxLHbJg5HIcMvX7kG1XXsfEBuS5jQm0PGYR-8u1S uk.icr.io"
+                    sh "docker login -u iamapikey -p API_KEY uk.icr.io"
                 
                 }
             }
