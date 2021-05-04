@@ -12,8 +12,8 @@ pipeline {
         NEXUS_REPOSITORY = "cp4i-project"
         NEXUS_CREDENTIAL_ID = "nexus-jenkins-user-credentials"
         API_KEY = credentials('apikey')
-        USERNAME = credentials('Usernem')
-        PASSWORD = credentials('Password')
+        USERNAME = credentials('Username')
+        PASSWORD = credentials('password')
         
    /*Nexus credentials and apikey has been stored in global credentials of jenkins*/
     }
