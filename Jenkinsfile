@@ -12,6 +12,7 @@ pipeline {
         NEXUS_REPOSITORY = "cp4i-project"
         NEXUS_CREDENTIAL_ID = "nexus-jenkins-user-credentials"
         API_KEY = credentials('apikey')
+        WGETCREDS = credetials('wgetcreds')
    /*Nexus credentials and apikey has been stored in global credentials of jenkins*/
     }
     stages {
@@ -49,7 +50,7 @@ pipeline {
             steps {
                 script {
                     sh "cp /var/lib/jenkins/.m2/repository/onlinebookstore/onlinebookstore/${BUILD_ID}/onlinebookstore-${BUILD_ID}.war ${workspace}"
-                    sh "docker build --build-arg BUILD_ID=${BUILD_ID} -t uk.icr.io/cp4i/cp4i_repo:cp4i_${BUILD_ID} ."
+                    sh "docker build --build-arg BUILD_ID=${BUILD_ID} --build-arg WGETCREDs=${WGETCREDS} -t uk.icr.io/cp4i/cp4i_repo:cp4i_${BUILD_ID} ."
                 
                 }
             }
