@@ -1,7 +1,5 @@
 FROM tomcat:8.0-alpine
 ARG BUILD_ID
-ARG USER
-ARG PASSWD
 #worked#
 COPY ./onlinebookstore-${BUILD_ID}.war /usr/local/tomcat/webapps/
 
