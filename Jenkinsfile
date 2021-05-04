@@ -51,7 +51,7 @@ pipeline {
             steps {
                 script {
                     sh "cp /var/lib/jenkins/.m2/repository/onlinebookstore/onlinebookstore/${BUILD_ID}/onlinebookstore-${BUILD_ID}.war ${workspace}"
-                    sh "docker build --build-arg BUILD_ID=${BUILD_ID} --build-arg username=${USER_CREDENTIALS_USR} --build-arg password=${$USER_CREDENTIALS_PSW} -t uk.icr.io/cp4i/cp4i_repo:cp4i_${BUILD_ID} ."
+                    sh "docker build --build-arg BUILD_ID=${BUILD_ID} --build-arg username=${USER_CREDENTIALS_USR} --build-arg password=${USER_CREDENTIALS_PSW} -t uk.icr.io/cp4i/cp4i_repo:cp4i_${BUILD_ID} ."
                 
                 }
             }
