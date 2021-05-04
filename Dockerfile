@@ -7,7 +7,7 @@ RUN echo ${BUILD_ID}
 
 
 #RUN cd /usr/local/tomcat/webapps/ && curl -u admin:admin -o onlinebookstore-${BUILD_ID}-v1.war "http://20.74.182.192:8081/repository/cp4i-project/onlinebookstore-${BUILD_ID}/v1/onlinebookstore-${BUILD_ID}-v1.war" -L
-RUN cd /usr/local/tomcat/webapps/ && wget --user=admin --password=admin http://20.74.182.192:8081/repository/cp4i-project/onlinebookstore-${BUILD_ID}/v1/onlinebookstore-${BUILD_ID}-v1.war
+RUN cd /usr/local/tomcat/webapps/ && wget http://admin:admin@20.74.182.192:8081/repository/cp4i-project/onlinebookstore-${BUILD_ID}/v1/onlinebookstore-${BUILD_ID}-v1.war
 RUN ls -lh /usr/local/tomcat/webapps/
 EXPOSE 8080
 
