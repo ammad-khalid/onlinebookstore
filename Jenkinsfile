@@ -12,7 +12,7 @@ pipeline {
         NEXUS_REPOSITORY = "cp4i-project"
         NEXUS_CREDENTIAL_ID = "nexus-jenkins-user-credentials"
         API_KEY = credentials('apikey')
-        WGETCREDS = credetials('wgetcreds')
+        
    /*Nexus credentials and apikey has been stored in global credentials of jenkins*/
     }
     stages {
